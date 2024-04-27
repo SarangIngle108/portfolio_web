@@ -10,7 +10,10 @@ class SideLogo extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: EdgeInsets.only(left: 2.w),
-        child: Text('Sarang Ingle'),
+        child: Text(
+          'Sarang Ingle',
+          style: TextStyle(fontSize: 8.sp),
+        ),
       ),
     );
   }

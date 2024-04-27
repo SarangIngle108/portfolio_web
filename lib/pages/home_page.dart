@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
               //skills section
               Container(
                 height: 500.h,
-                color: Colors.amber,
+                color: Colors.blueGrey,
                 child: Center(
                     child: Text(
                   'This is skills Section',
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               //project section
               Container(
                 height: 500.h,
-                color: Colors.red,
+                color: Colors.grey,
                 child: Center(
                     child: Text(
                   'This is projects Section',
