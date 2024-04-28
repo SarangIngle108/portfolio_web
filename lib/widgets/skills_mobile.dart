@@ -18,20 +18,49 @@ class SkillsMobile extends StatelessWidget {
         children: [
           for (int i = 0; i < platformIcons.length; ++i)
             Container(
-              margin: EdgeInsets.only(bottom: 8),
-              width: double.maxFinite,
+              padding: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                color: CustomColor.bgLight2,
                 borderRadius: BorderRadius.circular(5),
+                // gradient: const LinearGradient(colors: [
+                //   Colors.pinkAccent,
+                //   Colors.blue,
+                // ]),
+                // boxShadow: const [
+                //   BoxShadow(
+                //     color: Colors.pink,
+                //     offset: Offset(-1, 0),
+                //     blurRadius: 0.2,
+                //   ),
+                //   BoxShadow(
+                //     color: Colors.blue,
+                //     offset: Offset(1, 0),
+                //     blurRadius: 0.2,
+                //   ),
+                // ],
               ),
-              child: ListTile(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
-                leading: Image.asset(
-                  platformIcons[i]["img"],
-                  width: 26,
-                ),
-                title: Text(platformIcons[i]["title"]),
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(bottom: 12),
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: CustomColor.bgLight2,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: ListTile(
+                      contentPadding:
+                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
+                      leading: Image.asset(
+                        platformIcons[i]["img"],
+                        width: 26,
+                      ),
+                      title: Text(platformIcons[i]["title"]),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ],
               ),
             ),
           const SizedBox(

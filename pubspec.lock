@@ -91,6 +91,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  marqueer:
+    dependency: "direct main"
+    description:
+      name: marqueer
+      sha256: "7ce3ed6f00e963827e7f276a2573c06ea4b68da3465e9fd311cea879b63d4114"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.4"
   matcher:
     dependency: transitive
     description:

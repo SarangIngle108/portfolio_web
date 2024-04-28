@@ -10,8 +10,8 @@ class MobileDesktop extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
     return Container(
-      height: screenSize.height,
-      constraints: const BoxConstraints(minHeight: 560.0),
+      //   height: screenSize.height,
+      constraints: const BoxConstraints(minHeight: 450.0),
       margin: EdgeInsets.symmetric(horizontal: 40.w, vertical: 30.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,20 +30,34 @@ class MobileDesktop extends StatelessWidget {
               width: screenWidth,
               opacity: const AlwaysStoppedAnimation(.5),
               //   scale: 2,
-              height: screenSize.height / 1.5,
+              //       height: screenSize.height / 1.5,
             ),
           ),
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Hi,\nI'm Sarang Ingle\nA Flutter Developer",
+                "Hi,\nI'm Sarang Ingle",
                 style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 14.sp,
                     height: 1.5.h,
                     fontWeight: FontWeight.bold,
                     color: CustomColor.whitePrimary),
               ),
+              ShaderMask(
+                  shaderCallback: (bounds) {
+                    return const LinearGradient(colors: [
+                      Colors.pink,
+                      Colors.blueAccent,
+                    ]).createShader(bounds);
+                  },
+                  blendMode: BlendMode.srcATop,
+                  child: Text(
+                    'Flutter Developer',
+                    style:
+                        TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
+                  )),
             ],
           ),
         ],

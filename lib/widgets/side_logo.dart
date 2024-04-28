@@ -9,9 +9,8 @@ class SideLogo extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-          padding: EdgeInsets.only(left: 2.w),
-          child: CircleAvatar(
-              radius: 30.r, child: Image.asset('assets/firebase_icon.png'))),
+          padding: EdgeInsets.only(left: 0.w),
+          child: Image.asset('assets/flutter_normal_bird.jpg')),
     );
   }
 }
