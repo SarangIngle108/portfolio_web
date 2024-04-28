@@ -9,12 +9,9 @@ class SideLogo extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.only(left: 2.w),
-        child: Text(
-          'Sarang Ingle',
-          style: TextStyle(fontSize: 8.sp),
-        ),
-      ),
+          padding: EdgeInsets.only(left: 2.w),
+          child: CircleAvatar(
+              radius: 30.r, child: Image.asset('assets/firebase_icon.png'))),
     );
   }
 }
